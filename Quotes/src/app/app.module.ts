@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { QuotesFormComponent } from './quotes-form/quotes-form.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuotedetailComponent } from './quotedetail/quotedetail.component';
-import { UpvoteDirective } from './upvote.directive';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { UpvoteDirective } from './upvote.directive';
     QuotesFormComponent,
     QuoteComponent,
     QuotedetailComponent,
-    UpvoteDirective
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

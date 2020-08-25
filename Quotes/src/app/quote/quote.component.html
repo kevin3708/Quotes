@@ -2,8 +2,16 @@
 <h1>Quotes</h1>
     <ul>
         <div *ngFor='let quote of quotes;let i=index'>
-            <li appupvote>{{quote.quote}}</li>
+            <li appHighlight>{{quote.quote}}</li>
             <button (click)='toggleName(i)'>Toggle Name</button>
+            <div class="row">
+                <div class="col-md-2">
+                  <button (click)="upvotes()" class="btn btn-primary">Upvote{{upvote}}</button>
+                </div>
+                <div class="col-md-2">
+                 <button (click)="downvotes()" class="btn btn-primary">Downvote{{downvote}}</button>
+                </div>
+            </div>
             <app-quotedetail *ngIf='quote.showName'[quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quotedetail>
         </div>
         <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
